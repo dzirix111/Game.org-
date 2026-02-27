@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Games.Org | تحميل ألعاب مجانية</title>
+
+<meta name="description" content="موقع ألعاب مجاني يحتوي على ألعاب أكشن وباتل رويال وألعاب أندرويد أونلاين">
+<meta name="keywords" content="ألعاب, تحميل ألعاب, ألعاب أندرويد, باتل رويال, ألعاب مجانية, Games Org">
+<meta name="author" content="DZIRIX">
+<meta name="robots" content="index, follow">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+Games.<br><span>Org</span>
+</div>
+
+<div id="authArea">
+<button onclick="showLogin()">تسجيل دخول</button>
+</div>
+</header>
+
+<div class="top-bar">
+<input type="text" id="searchInput" placeholder="🔍 بحث عن لعبة..." onkeyup="searchGames()">
+<select id="categoryFilter" onchange="filterCategory()">
+<option value="all">كل التصنيفات</option>
+<option value="Android">Android</option>
+<option value="PC">PC</option>
+<option value="Console">Console</option>
+</select>
+<span class="views">👁 <span id="views"></span></span>
+</div>
+
+<div id="loginBox" class="login-box">
+<input type="text" id="username" placeholder="اسم المستخدم">
+<input type="password" id="password" placeholder="كلمة السر">
+<button onclick="login()">دخول</button>
+</div>
+
+<div id="developerPanel" class="dev-panel">
+<h3>🛠 لوحة تحكم المطور</h3>
+
+<input type="text" id="gameName" placeholder="اسم اللعبة">
+<input type="text" id="gameDesc" placeholder="وصف اللعبة">
+<input type="text" id="gameLink" placeholder="رابط التحميل">
+<select id="gameCategory">
+<option>Android</option>
+<option>PC</option>
+<option>Console</option>
+</select>
+<input type="file" id="gameImage">
+
+<button onclick="addGame()">إضافة لعبة</button>
+
+<hr>
+
+<input type="file" id="bgImage">
+<button onclick="changeBG()">تغيير الخلفية</button>
+
+<button onclick="closeDeveloperPanel()">إغلاق</button>
+</div>
+
+<div class="container">
+<div id="gamesList" class="games"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
